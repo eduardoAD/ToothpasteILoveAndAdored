@@ -18,14 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.adoredToothpastes = [[NSMutableArray alloc]init];
-
+    [self load];
+    if (self.adoredToothpastes == nil) {
+        self.adoredToothpastes = [[NSMutableArray alloc]init];
+    } 
 }
 
 -(IBAction)unwindFromToothpastesViewController:(UIStoryboardSegue*)segue{
     ToothpastesTableViewController *viewController = segue.sourceViewController;
     [self.adoredToothpastes addObject:[viewController adoredToothpaste]];
     [self.adorabeTableView reloadData];
+    [self save];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,5 +42,28 @@
 
     return cell;
 }
+
+-(NSURL *)documentsDicrectory{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *files = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    return files.firstObject;
+}
+
+-(void)load{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSURL *pList = [[self documentsDicrectory] URLByAppendingPathComponent:@"pastes.plist"];
+    self.adoredToothpastes = [NSMutableArray arrayWithContentsOfURL:pList];
+    NSLog(@"date: %@",[userDefaults objectForKey:@"LastSaved"]);
+}
+
+-(void)save{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSURL *pList = [[self documentsDicrectory] URLByAppendingPathComponent:@"pastes.plist"];
+    [self.adoredToothpastes writeToURL:pList atomically:YES];
+
+    [userDefaults setObject:[NSDate date] forKey:@"LastSaved"];
+    [userDefaults synchronize];
+}
+
 
 @end
