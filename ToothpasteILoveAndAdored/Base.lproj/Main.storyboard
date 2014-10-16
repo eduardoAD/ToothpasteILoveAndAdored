@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QLr-Uu-ymj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Adored Toothpaste-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="AdoredToothpastesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,116 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-Pn-Jin">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="7zW-bE-fxv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zW-bE-fxv" id="dKR-N6-jfc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="JXM-mv-inC"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="acW-f6-cl9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k7K-Pn-Jin" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IMH-Tg-Fna"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="k7K-Pn-Jin" secondAttribute="bottom" id="R4B-RU-GJs"/>
+                            <constraint firstItem="k7K-Pn-Jin" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rem-yo-Qz0"/>
+                            <constraint firstAttribute="trailing" secondItem="k7K-Pn-Jin" secondAttribute="trailing" id="vsP-9c-wyS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="k7K-Pn-Jin"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IMH-Tg-Fna"/>
+                                <exclude reference="rem-yo-Qz0"/>
+                                <exclude reference="vsP-9c-wyS"/>
+                                <exclude reference="R4B-RU-GJs"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="k7K-Pn-Jin"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IMH-Tg-Fna"/>
+                                <include reference="rem-yo-Qz0"/>
+                                <include reference="vsP-9c-wyS"/>
+                                <include reference="R4B-RU-GJs"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Adored Toothpaste" id="cRN-Ee-AkS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="S3X-KJ-UK9">
+                            <connections>
+                                <segue destination="G6k-5k-FYc" kind="show" id="cib-o5-JXK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adorabeTableView" destination="k7K-Pn-Jin" id="fkE-DG-kR0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1164" y="1041"/>
+        </scene>
+        <!--Toothpastes Table View Controller-->
+        <scene sceneID="CQk-et-raW">
+            <objects>
+                <tableViewController id="G6k-5k-FYc" customClass="ToothpastesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wkz-Fh-Alx">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="x1K-1B-J69">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1K-1B-J69" id="aBm-Cg-cG2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yTy-0a-YGs" kind="unwind" unwindAction="unwindFromToothpastesViewController:" id="Usl-3z-grt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G6k-5k-FYc" id="wqC-Wx-ztA"/>
+                            <outlet property="delegate" destination="G6k-5k-FYc" id="rS8-u3-lCl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTG-hs-J6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yTy-0a-YGs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="1041"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h4i-Zk-sPD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QLr-Uu-ymj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="swX-dB-kFv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="A8f-qn-yka"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szd-0W-KvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="1041"/>
         </scene>
     </scenes>
 </document>

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		E416487719F01E0E008984D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E416487619F01E0E008984D3 /* main.m */; };
 		E416487A19F01E0E008984D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E416487919F01E0E008984D3 /* AppDelegate.m */; };
-		E416487D19F01E0E008984D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E416487C19F01E0E008984D3 /* ViewController.m */; };
+		E416487D19F01E0E008984D3 /* AdoredToothpastesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E416487C19F01E0E008984D3 /* AdoredToothpastesViewController.m */; };
 		E416488019F01E0E008984D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E416487E19F01E0E008984D3 /* Main.storyboard */; };
 		E416488219F01E0E008984D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E416488119F01E0E008984D3 /* Images.xcassets */; };
 		E416488519F01E0E008984D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E416488319F01E0E008984D3 /* LaunchScreen.xib */; };
 		E416489119F01E0E008984D3 /* ToothpasteILoveAndAdoredTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E416489019F01E0E008984D3 /* ToothpasteILoveAndAdoredTests.m */; };
+		E416489C19F02495008984D3 /* ToothpastesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E416489B19F02495008984D3 /* ToothpastesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		E416487619F01E0E008984D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E416487819F01E0E008984D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E416487919F01E0E008984D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E416487B19F01E0E008984D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E416487C19F01E0E008984D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E416487B19F01E0E008984D3 /* AdoredToothpastesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdoredToothpastesViewController.h; sourceTree = "<group>"; };
+		E416487C19F01E0E008984D3 /* AdoredToothpastesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdoredToothpastesViewController.m; sourceTree = "<group>"; };
 		E416487F19F01E0E008984D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E416488119F01E0E008984D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E416488419F01E0E008984D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E416488A19F01E0E008984D3 /* ToothpasteILoveAndAdoredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToothpasteILoveAndAdoredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E416488F19F01E0E008984D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E416489019F01E0E008984D3 /* ToothpasteILoveAndAdoredTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToothpasteILoveAndAdoredTests.m; sourceTree = "<group>"; };
+		E416489A19F02495008984D3 /* ToothpastesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToothpastesTableViewController.h; sourceTree = "<group>"; };
+		E416489B19F02495008984D3 /* ToothpastesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToothpastesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				E416487819F01E0E008984D3 /* AppDelegate.h */,
 				E416487919F01E0E008984D3 /* AppDelegate.m */,
-				E416487B19F01E0E008984D3 /* ViewController.h */,
-				E416487C19F01E0E008984D3 /* ViewController.m */,
+				E416487B19F01E0E008984D3 /* AdoredToothpastesViewController.h */,
+				E416487C19F01E0E008984D3 /* AdoredToothpastesViewController.m */,
 				E416487E19F01E0E008984D3 /* Main.storyboard */,
+				E416489A19F02495008984D3 /* ToothpastesTableViewController.h */,
+				E416489B19F02495008984D3 /* ToothpastesTableViewController.m */,
 				E416488119F01E0E008984D3 /* Images.xcassets */,
 				E416488319F01E0E008984D3 /* LaunchScreen.xib */,
 				E416487419F01E0E008984D3 /* Supporting Files */,
@@ -219,7 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E416487D19F01E0E008984D3 /* ViewController.m in Sources */,
+				E416489C19F02495008984D3 /* ToothpastesTableViewController.m in Sources */,
+				E416487D19F01E0E008984D3 /* AdoredToothpastesViewController.m in Sources */,
 				E416487A19F01E0E008984D3 /* AppDelegate.m in Sources */,
 				E416487719F01E0E008984D3 /* main.m in Sources */,
 			);
