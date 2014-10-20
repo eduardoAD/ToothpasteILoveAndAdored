@@ -46,10 +46,10 @@
                                 <exclude reference="k7K-Pn-Jin"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="R4B-RU-GJs"/>
                                 <exclude reference="IMH-Tg-Fna"/>
                                 <exclude reference="rem-yo-Qz0"/>
                                 <exclude reference="vsP-9c-wyS"/>
-                                <exclude reference="R4B-RU-GJs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -57,10 +57,10 @@
                                 <include reference="k7K-Pn-Jin"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="R4B-RU-GJs"/>
                                 <include reference="IMH-Tg-Fna"/>
                                 <include reference="rem-yo-Qz0"/>
                                 <include reference="vsP-9c-wyS"/>
-                                <include reference="R4B-RU-GJs"/>
                             </mask>
                         </variation>
                     </view>
@@ -84,6 +84,7 @@
             <objects>
                 <tableViewController id="G6k-5k-FYc" customClass="ToothpastesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wkz-Fh-Alx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
